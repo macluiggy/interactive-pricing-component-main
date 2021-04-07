@@ -60,9 +60,16 @@ main {
     height: 0.5em;
     outline: none;
   -webkit-appearance: none;
-  background-color: var(--Soft-Cyan-\\Full-Slider-Bar\\);
-  
+  background: linear-gradient(to left, var(--Very-Pale-Blue-\\Main-Background\\) 0%, var(--Very-Pale-Blue-\\Main-Background\\) 50%, var(--Soft-Cyan-\\Full-Slider-Bar\\) 50%, var(--Soft-Cyan-\\Full-Slider-Bar\\) 100%);
 }
+#section2 #slider1:hover {
+    cursor: pointer;
+}
+
+
+#slider1 {
+    
+  }
 #section2 #slider1::-webkit-slider-thumb {
     -webkit-appearance: none;
   appearance: none;
@@ -83,14 +90,7 @@ main {
     animation-fill-mode: forwards;
     background-color: hsl(174, 56%, 36%);
 }
-@keyframes changeColorSliderThumb {
-    0% {
-        background-color: hsl(174, 64%, 53%);
-    }
-    100% {
-        background-color: hsl(174, 56%, 36%);
-    }
-}
+
 #section2 p {
     display: flex;
     align-items: center;
