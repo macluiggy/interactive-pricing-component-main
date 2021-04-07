@@ -10,7 +10,7 @@
     /*neutral*/
     --White-\\Pricing-Component-Background\\: hsl (0, 0%, 100%);
     --Very-Pale-Blue-\\Main-Background\\: hsl(230, 100%, 99%);
-    --Light-Grayish-Blue-\\Empty-Slider-Bar\\: hsl(224, 65%, 95%);
+    --Light-Grayish-Blue-\\Empty-Slider-Bar\\: hsla(228, 100%, 96%, 0.596);
     --Light-Grayish-Blue-\\Toggle-Background\\: hsl(223, 50%, 8-%);
     --Grayish-Blue-\\Text\\: hsl(225, 20%, 60%);
     --Dark-Desaturated-Blue-\\Text-and-CTA-Background\\: hsl(227, 35%, 25%);
@@ -18,6 +18,7 @@
 body {
     font-size: 15px;
     max-width: 1440px;
+    min-width: 330px;
     font-family: 'Manrope', sans-serif;
     background-color: var(--Light-Grayish-Blue-\\Empty-Slider-Bar\\);
     color: var(--Grayish-Blue-\\Text\\);
@@ -26,6 +27,18 @@ main {
     margin: auto;
     width: 35%;
 }
+@media screen and (max-width:1000px) {
+    main {
+        width: 50%;
+    }
+}
+@media screen and (max-width:600px) {
+    main {
+        width: 90%;
+    }
+}
+
+/*SECTION 1*/
 #section1 {
     border: none tomato;
     text-align: center;
@@ -33,25 +46,50 @@ main {
     background: url('../images/pattern-circles.svg') no-repeat;
     background-position: center center;
     background-size: 25%;
+    width: 100%;
 }
 #section1 h1 {
     color: var(--Dark-Desaturated-Blue-\\Text-and-CTA-Background\\);
+    font-size: 1.5em;
 }
 #section1 h3 {
-    font-size: 12px;
+    font-size: 0.8em; /* 12px / 15px*/
 }
+
+/* SECTION 2*/
 #section2 {
-    border: solid teal;
+    border: none teal;
     background-color: var(--Very-Pale-Blue-\\Main-Background\\);
     padding: 1em 2em 2em 2em;
+    box-shadow: 0em 0em 0.5em 0.01em;
 }
 #section2 .amount {
     border: none;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-areas: 
+    "grid1 grid2"
+    "grid3 grid3";
+    align-items: center;
+}
+.grid1 {
+    border: none;
+    grid-area: grid1;
+}
+.grid2 {
+    border: none;
+    grid-area: grid2;
+}
+.grid2 p {
+    float: right;
+}
+.grid3 {
+    border: none;
+    width: 100%;
+    grid-area: grid3;
 }
 #section2 #sliderData {
     border: none;
+    width: 100%;
 }
 #section2 #slider1 {
     border: none;
@@ -66,10 +104,6 @@ main {
     cursor: pointer;
 }
 
-
-#slider1 {
-    
-  }
 #section2 #slider1::-webkit-slider-thumb {
     -webkit-appearance: none;
   appearance: none;
@@ -99,4 +133,13 @@ main {
     font-size: 2.1em;
     font-weight: bolder;
     color: var(--Dark-Desaturated-Blue-\\Text-and-CTA-Background\\);
+}
+@media screen and (max-width:375px) {
+    #section2 .amount {
+        grid-template-areas: "grid1" "grid3" "grid2";
+        justify-items: center;
+    }
+    #section2 p {
+        float: unset;
+    }
 }
