@@ -23,11 +23,13 @@ body {
     background-color: var(--Light-Grayish-Blue-\\Empty-Slider-Bar\\);
     color: var(--Grayish-Blue-\\Text\\);
     background: url('../images/bg-pattern.svg') no-repeat;
-    background-position: 0% 500%;
+    background-position: 0% -10%;
+    position: relative;
 }
 main {
     margin: auto;
     width: 35%;
+    margin-bottom: 5em;
 }
 @media screen and (max-width:1000px) {
     main {
@@ -147,7 +149,7 @@ main {
 }
 .time-billing {
     display: flex;
-    border: solid;
+    border: none;
     font-size: 0.8em;
     padding: 3em 0em 0em 0em;
     justify-content: flex-end;
@@ -215,4 +217,54 @@ main {
     background-color: var(--Light-Grayish-Red-\\Discount-Background\\);
     color: var(--Light-Red-\\Discount-Text\\);
     margin: 0 0 0 0.5em;
+}
+.product-description {
+    display: grid;
+    border: none;
+    padding: 2em 0em 0em 0em;
+    font-size: 0.8em;
+    grid-template-areas: 'list trial';
+}
+ul {
+    list-style-type: none;
+    line-height: 2.5em;
+    border: none;
+    padding: 0;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    grid-area: list;
+}
+
+button {
+    height: 3em;
+    align-self: center;
+    border: none;
+    border-radius: 2.5em;
+    background-color: var(--Dark-Desaturated-Blue-\\Text-and-CTA-Background\\);
+    color: var(--Very-Pale-Blue-\\Main-Background\\);
+    font-weight: bolder;
+    cursor: pointer;
+    outline: none;
+    grid-area: trial;
+    max-width: 170px;
+}
+@media screen and (max-width: 375px) {
+    .product-description {
+        grid-template-areas: 'list' 'trial';
+        justify-items: center;
+    }
+    button {
+        width: 100%;
+    }
+    ul {
+        text-align: center;
+    }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    left: 38.5%;
 }

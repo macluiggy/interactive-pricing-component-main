@@ -43,7 +43,7 @@
             perMonth.text('$' + values[sliderBar.val()] + '.00');
             perTime.text('/year');
             ////console.log(pageviewsList);
-            if (pageviewsList[this.value] == 12) {
+            if (pageviewsList[sliderBar.val()] == 12) {
                 pageviews.text(pageviewsList[sliderBar.val()] + 'M Pageviews');
             } else {
                 pageviews.text(pageviewsList[sliderBar.val()] + 'K Pageviews');
@@ -55,7 +55,7 @@
             perMonth.text('$' + values[sliderBar.val()] + '.00');
             //console.log(checkbox.is(':checked'));
             //console.log(pageviewsList);
-            if (pageviewsList[this.value] < 10) {
+            if (pageviewsList[sliderBar.val()] < 10) {
                 pageviews.text(pageviewsList[sliderBar.val()] + 'M Pageviews');
             } else {
                 pageviews.text(pageviewsList[sliderBar.val()] + 'K Pageviews');
