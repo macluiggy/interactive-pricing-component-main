@@ -100,7 +100,7 @@ main {
     height: 0.5em;
     outline: none;
   -webkit-appearance: none;
-  background: linear-gradient(to left, var(--Very-Pale-Blue-\\Main-Background\\) 0%, var(--Very-Pale-Blue-\\Main-Background\\) 50%, var(--Soft-Cyan-\\Full-Slider-Bar\\) 50%, var(--Soft-Cyan-\\Full-Slider-Bar\\) 100%);
+  background: linear-gradient(to left, #80808054 0%, #80808054  50%, var(--Soft-Cyan-\\Full-Slider-Bar\\) 50%, var(--Soft-Cyan-\\Full-Slider-Bar\\) 100%);
 }
 #section2 #slider1:hover {
     cursor: pointer;
@@ -150,6 +150,8 @@ main {
     border: solid;
     font-size: 0.8em;
     padding: 3em 0em 0em 0em;
+    justify-content: flex-end;
+    width: 95%;
 }
 .switch {
     position: relative;
@@ -209,3 +211,8 @@ main {
   .slider.round:before {
     border-radius: 50%;
   }
+.discount {
+    background-color: var(--Light-Grayish-Red-\\Discount-Background\\);
+    color: var(--Light-Red-\\Discount-Text\\);
+    margin: 0 0 0 0.5em;
+}
