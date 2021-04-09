@@ -26,14 +26,14 @@ Users should be able to:
 - Use the slider and toggle to see prices for different page view numbers
 
 ### Screenshot
-
+This is the challenge solution screenshot:
 ![final](./final.jpg)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [github](https://github.com/macluiggy/interactive-pricing-component-main)
+- Live Site URL: [github page](https://macluiggy.github.io/interactive-pricing-component-main)
 
 ## My process
 
