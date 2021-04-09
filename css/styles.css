@@ -25,6 +25,7 @@ body {
     background: url('../images/bg-pattern.svg') no-repeat;
     background-position: 0% -10%;
     position: relative;
+    padding-bottom: 3em;
 }
 main {
     margin: auto;
@@ -261,10 +262,4 @@ button {
     ul {
         text-align: center;
     }
-}
-
-.attribution {
-    position: absolute;
-    bottom: 0;
-    left: 38.5%;
 }
